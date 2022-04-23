@@ -12,6 +12,10 @@ import { ListadoTareasComponent } from './listado-tareas/listado-tareas.componen
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    SubtitulosComponent,
+    ListadoTareasComponent
   ]
 })
 export class TareasModule { }
