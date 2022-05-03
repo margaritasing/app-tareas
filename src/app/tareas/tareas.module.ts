@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SubtitulosComponent } from './subtitulos/subtitulos.component';
 import { ListadoTareasComponent } from './listado-tareas/listado-tareas.component';
 import { GridComponent } from './grid/grid.component';
+import { TareasService } from './services/tareas.service';
 
 
 
@@ -15,9 +16,9 @@ import { GridComponent } from './grid/grid.component';
   imports: [
     CommonModule
   ],
-  exports:[
-    SubtitulosComponent,
-    ListadoTareasComponent
-  ]
+  exports:[   
+    GridComponent
+  ],
+  providers:[TareasService]
 })
 export class TareasModule { }
