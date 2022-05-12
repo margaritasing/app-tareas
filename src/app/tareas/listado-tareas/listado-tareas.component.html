@@ -13,14 +13,14 @@
         <th>{{ i + 1}}</th>
         <td>
           <b>
-            {{ item }}
+            {{ item.tarea }}
           </b>
         </td>
         <td>
           <button class="button is-link">Completar</button>
         </td>
         <td>              
-          <button class="button is-danger">Eliminar</button>
+          <button class="button is-danger"  (click)="delete(item)">Eliminar</button>
         </td>            
       </tr>
       
