@@ -12,12 +12,12 @@
       <tr *ngFor="let item of tareas, index as i"> <!-- La ultima parte es el nombre del array que va a recorrer -->
         <th>{{ i + 1}}</th>
         <td>
-          <b>
+          <b [ngClass]="item.completada ? 'is-underlined' : ''">
             {{ item.tarea }}
           </b>
         </td>
         <td>
-          <button class="button is-link">Completar</button>
+          <button [disabled]="item.completada" class="button is-link" (click)="complete(item)">Completar</button>
         </td>
         <td>              
           <button class="button is-danger"  (click)="delete(item)">Eliminar</button>
